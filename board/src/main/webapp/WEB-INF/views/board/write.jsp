@@ -8,27 +8,27 @@
 </head>
 <body>
 
-<!-- 메뉴 구현 -->
-<div id="nav">
- <%@ include file="../include/nav.jsp" %>
-</div>
+	<!-- 메뉴 구현 -->
+	<div id="nav">
+	 <%@ include file="../include/nav.jsp" %>
+	</div>
 
 
-<!-- 게시물 작성 구현 -->
-<form method="post">
-
-	<label>제목</label>
-	<input type="text" name="title" /><br />
+	<!-- 게시물 작성 구현 -->
+	<form method="post">
 	
-	<label>작성자</label>
-	<input type="text" name="writer" /><br />
-	
-	<label>내용</label>
-	<textarea cols="50" rows="5" name="content"></textarea><br />
-	
-	<button type="submit">작성</button>
-	
-</form>
+		<label>제목</label>
+		<input type="text" name="title" /><br />
+		
+		<label>작성자</label>
+		<input type="text" name="writer" /><br />
+		
+		<label>내용</label>
+		<textarea cols="50" rows="5" name="content"></textarea><br />
+		
+		<button type="submit">작성</button>
+		
+	</form>
 
 </body>
 </html>

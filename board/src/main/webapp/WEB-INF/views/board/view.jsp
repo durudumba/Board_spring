@@ -8,29 +8,29 @@
 </head>
 <body>
 
-<!-- 메뉴 구현 -->
-<div id="nav">
- <%@ include file="../include/nav.jsp" %>
-</div>
-
-<!-- 게시물 조회 구현 -->
-<form method="post">
-
-	<label>제목</label>
-	${view.title}<br />
-	
-	<label>작성자</label>
-	${view.writer}<br />
-	
-	<label>내용</label><br />
-	${view.content}<br />
-	
-	<div>
-	<a href="/board/modify?bno=${view.bno}">게시물 수정</a>
-	<a href="/board/delete?bno=${view.bno}">게시물 삭제</a>
+	<!-- 메뉴 구현 -->
+	<div id="nav">
+	 <%@ include file="../include/nav.jsp" %>
 	</div>
 	
-</form>
+	<!-- 게시물 조회 구현 -->
+	<form method="post">
+	
+		<label>제목</label>
+		${view.title}<br />
+		
+		<label>작성자</label>
+		${view.writer}<br />
+		
+		<label>내용</label><br />
+		${view.content}<br />
+		
+		<div>
+		<a href="/board/modify?bno=${view.bno}">게시물 수정</a>
+		<a href="/board/delete?bno=${view.bno}">게시물 삭제</a>
+		</div>
+		
+	</form>
 
 </body>
 </html>

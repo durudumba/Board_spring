@@ -10,47 +10,47 @@
 <title>게시물 목록</title>
 </head>
 <body>
-
-<!-- 메뉴 구현 -->
-<div id="nav">
- <%@ include file="../include/nav.jsp" %>
-</div>
-
-<!-- 게시물 목록 구현 -->
-<table>
- 	<thead>
-  		<tr>
-		   <th>번호</th>
-		   <th>제목</th>
-		   <th>작성일</th>
-		   <th>작성자</th>
-		   <th>조회수</th>
-  		</tr>
- 	</thead>
- 
-	<tbody>
 	
-		<c:forEach items="${list}" var="list">
-		 <tr>
-		  <td>${list.bno}</td>
+	<!-- 메뉴 구현 -->
+	<div id="nav">
+	 <%@ include file="../include/nav.jsp" %>
+	</div>
+	
+	<!-- 게시물 목록 구현 -->
+	<table>
+	 	<thead>
+	  		<tr>
+			   <th>번호</th>
+			   <th>제목</th>
+			   <th>작성일</th>
+			   <th>작성자</th>
+			   <th>조회수</th>
+	  		</tr>
+	 	</thead>
+	 
+		<tbody>
+		
+			<c:forEach items="${list}" var="list">
+			 <tr>
+			  <td>${list.bno}</td>
+			  
+			  <!-- title -->
+			  <td>
+			  	<a href="/board/view?bno=${list.bno }">${list.title }</a>
+			  <td/>
+			  
+			  <!-- regDate -->
+			  <td>
+			  	<fmt:formatDate value="${list.regDate}" pattern="yyyy-MM-dd"/>
+			  </td>
+	
+			  <td>${list.writer}</td>
+			  <td>${list.viewCnt}</td>
+			 </tr>
+			</c:forEach>
 		  
-		  <!-- title -->
-		  <td>
-		  	<a href="/board/view?bno=${list.bno }">${list.title }</a>
-		  <td/>
-		  
-		  <!-- regDate -->
-		  <td>
-		  	<fmt:formatDate value="${list.regDate}" pattern="yyyy-MM-dd"/>
-		  </td>
-
-		  <td>${list.writer}</td>
-		  <td>${list.viewCnt}</td>
-		 </tr>
-		</c:forEach>
-	  
-	</tbody>
-</table>
+		</tbody>
+	</table>
 
 
 </body>
